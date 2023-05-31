@@ -103,7 +103,7 @@ class PathFinder(
             currentWeight = currentWeight + timeFunc(endpointMoveTimeHour),
             endTime = startTimeDouble + elapsedTimeHour + endpointMoveTimeHour,
             mealTimes = mealTimes,
-            count = visited.count()
+            count = visited.count { !it.isMeal }
         )
 
         if (totalCost < minCost) {
